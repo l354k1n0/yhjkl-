@@ -1,102 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Professional Services</title>
+  <meta name="description" content="Serveis professionals de coaching per assolir els teus objectius.">
+  <meta name="keywords" content="coaching, desenvolupament personal, tallers, sessions grupals">
+  <title>Les Aquino - Serveis Professionals</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Header with logo changed to "lesaquino" -->
+  <header id="header">
+    <div class="logo"><strong>lesaquino</strong></div>
+    <nav>
+      <a href="#about">Sobre Mi</a>
+      <a href="#services">Serveis</a>
+      <a href="#faq">Preguntes Freqüents</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contacte</a>
+    </nav>
+    <button class="dark-toggle" id="darkToggle" aria-label="Canviar mode fosc o clar">Mode Fosc</button>
+  </header>
 
-<header id="header">
-  <div class="logo"><strong>Your Name</strong></div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#faq">FAQ</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <button class="dark-toggle" id="darkToggle">Dark Mode</button>
-</header>
+  <!-- Hero section with "SUBSCRIU-TE" button -->
+  <section class="hero">
+    <h1>Benvinguts als Meus Serveis Professionals</h1>
+    <p>Ajudant-te a assolir els teus objectius amb coaching personalitzat i orientació.</p>
+    <a href="#contact" class="button" aria-label="Subscriu-te als serveis">SUBSCRIU-TE</a>
+  </section>
 
-<section class="hero">
-  <h1>Welcome to My Professional Services</h1>
-  <p>Helping you achieve your goals with tailored coaching and guidance.</p>
-  <button>Book a Session</button>
-</section>
+  <!-- About section (translated to Catalan) -->
+  <section id="about" class="about">
+    <h2>Sobre Mi</h2>
+    <p>Sóc un coach professional amb experiència en desenvolupament personal, tallers i sessions grupals. Ajudo els clients a assolir el seu màxim potencial mitjançant orientació estructurada i estratègies personalitzades.</p>
+  </section>
 
-<section id="about" class="about">
-  <h2>About Me</h2>
-  <p>I am a professional coach with experience in personal development, workshops, and group sessions. I help clients reach their full potential through structured guidance and personalized strategies.</p>
-</section>
-
-<section id="services">
-  <h2>Services</h2>
-  <div class="services">
-    <div class="service-card"><h3>Individual Sessions</h3><p>Personalized one-on-one sessions to meet your unique goals.</p></div>
-    <div class="service-card"><h3>Workshops</h3><p>Interactive group workshops focused on skill development.</p></div>
-    <div class="service-card"><h3>Group Coaching</h3><p>Small group coaching sessions for teamwork and collaboration.</p></div>
-  </div>
-</section>
-
-<section id="faq">
-  <h2>FAQ</h2>
-  <div class="faq-item">
-    <div class="faq-question">How long is a session? <span>+</span></div>
-    <div class="faq-answer">Sessions typically last 60 minutes, but custom plans are available.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-question">Do you offer online sessions? <span>+</span></div>
-    <div class="faq-answer">Yes, I work with clients worldwide via Zoom or Google Meet.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-question">Do you work with teams? <span>+</span></div>
-    <div class="faq-answer">Absolutely! I provide workshops and group coaching for teams.</div>
-  </div>
-</section>
-
-<section id="blog">
-  <h2>Blog</h2>
-  <div class="blog">
-    <div class="blog-post">
-      <h3>How to Stay Motivated</h3>
-      <p>Learn practical strategies to keep your motivation high even during challenges.</p>
-      <a href="#">Read More →</a>
+  <!-- Services section (translated to Catalan) -->
+  <section id="services">
+    <h2>Serveis</h2>
+    <div class="services">
+      <div class="service-card"><h3>Sessions Individuals</h3><p>Sessions personalitzades un a un per assolir els teus objectius únics.</p></div>
+      <div class="service-card"><h3>Tallers</h3><p>Tallers interactius en grup centrats en el desenvolupament d'habilitats.</p></div>
+      <div class="service-card"><h3>Coaching Grupal</h3><p>Sessions de coaching en grups petits per al treball en equip i col·laboració.</p></div>
     </div>
-    <div class="blog-post">
-      <h3>Teamwork That Works</h3>
-      <p>Discover methods to improve communication and collaboration in teams.</p>
-      <a href="#">Read More →</a>
+  </section>
+
+  <!-- FAQ section with ARIA enhancements -->
+  <section id="faq">
+    <h2>Preguntes Freqüents</h2>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq1">Quant dura una sessió? <span>+</span></button>
+      <div class="faq-answer" id="faq1">Les sessions solen durar 60 minuts, però hi ha plans personalitzats disponibles.</div>
     </div>
-    <div class="blog-post">
-      <h3>Mindset for Success</h3>
-      <p>Explore techniques to build a strong mindset that supports your goals.</p>
-      <a href="#">Read More →</a>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq2">Ofereixes sessions en línia? <span>+</span></button>
+      <div class="faq-answer" id="faq2">Sí, treballo amb clients d'arreu del món a través de Zoom o Google Meet.</div>
     </div>
-  </div>
-</section>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq3">Treballes amb equips? <span>+</span></button>
+      <div class="faq-answer" id="faq3">D'acord! Ofereixo tallers i coaching grupal per a equips.</div>
+    </div>
+  </section>
 
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <form action="https://formsubmit.co/TUEMAIL" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-<footer>
-  <p>&copy; 2025 Your Name. All rights reserved.</p>
-  <p>
-    <a href="#">Facebook</a> | 
-    <a href="#">Instagram</a> | 
-    <a href="#">LinkedIn</a>
-  </p>
-</footer>
-
-<script src="js/script.js"></script>
-</body>
-</html>
+  <!-- Blog section (translated to Catalan) -->
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="blog">
+      <div class="blog-post">
+        <h3>Com Mantenir-se Motivats</h3>
+        <p>Aprèn estratègies pràctiques per mantenir alta la motivació fins i tot en reptes.</p>
+        <a href="#" aria-label="Llegeix més sobre com mantenir-se motivat">Llegeix Més →</a>
+      </
